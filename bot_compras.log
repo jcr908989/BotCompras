@@ -1,0 +1,82 @@
+2026-09-05 14:07:47,070 - INFO - WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.204:5000
+2026-09-05 14:07:47,070 - INFO - Press CTRL+C to quit
+2026-09-05 14:07:47,097 - INFO -  * Restarting with watchdog (windowsapi)
+2026-09-05 14:07:47,723 - WARNING -  * Debugger is active!
+2026-09-05 14:07:47,728 - INFO -  * Debugger PIN: 276-209-994
+2026-09-05 14:07:59,983 - INFO - 127.0.0.1 - - [05/Sep/2026 14:07:59] "GET / HTTP/1.1" 302 -
+2026-09-05 14:08:00,015 - INFO - 127.0.0.1 - - [05/Sep/2026 14:08:00] "GET /login HTTP/1.1" 200 -
+2026-09-05 14:08:00,242 - INFO - 127.0.0.1 - - [05/Sep/2026 14:08:00] "GET /favicon.ico HTTP/1.1" 404 -
+2026-09-05 14:10:03,925 - INFO - 127.0.0.1 - - [05/Sep/2026 14:10:03] "POST /login HTTP/1.1" 302 -
+2026-09-05 14:10:03,978 - INFO - 127.0.0.1 - - [05/Sep/2026 14:10:03] "GET / HTTP/1.1" 200 -
+2026-09-05 14:10:04,170 - INFO - 127.0.0.1 - - [05/Sep/2026 14:10:04] "GET /api/logs HTTP/1.1" 200 -
+2026-09-05 14:10:09,384 - INFO - 127.0.0.1 - - [05/Sep/2026 14:10:09] "GET /api/logs HTTP/1.1" 200 -
+2026-09-05 14:10:10,683 - INFO - 127.0.0.1 - - [05/Sep/2026 14:10:10] "GET /configuracion HTTP/1.1" 200 -
+2026-09-05 14:10:59,925 - INFO -  * Detected change in 'C:\\Users\\jcr90\\AppData\\Local\\Programs\\Python\\Python314\\Lib\\logging\\__init__.py', reloading
+2026-09-05 14:10:59,994 - INFO - 127.0.0.1 - - [05/Sep/2026 14:10:59] "POST /configuracion HTTP/1.1" 302 -
+2026-09-05 14:11:00,114 - INFO -  * Restarting with watchdog (windowsapi)
+2026-09-05 14:11:00,760 - WARNING -  * Debugger is active!
+2026-09-05 14:11:00,762 - INFO -  * Debugger PIN: 276-209-994
+2026-09-05 14:11:00,798 - INFO - 127.0.0.1 - - [05/Sep/2026 14:11:00] "GET /configuracion HTTP/1.1" 200 -
+2026-09-05 14:11:46,249 - INFO - 127.0.0.1 - - [05/Sep/2026 14:11:46] "GET / HTTP/1.1" 200 -
+2026-09-05 14:11:46,285 - INFO - 127.0.0.1 - - [05/Sep/2026 14:11:46] "GET /api/logs HTTP/1.1" 200 -
+2026-09-05 14:11:51,286 - INFO - 127.0.0.1 - - [05/Sep/2026 14:11:51] "GET /api/logs HTTP/1.1" 200 -
+2026-09-05 14:11:53,356 - INFO - 127.0.0.1 - - [05/Sep/2026 14:11:53] "GET /productos HTTP/1.1" 200 -
+2026-09-05 14:16:02,755 - INFO - 192.168.1.132 - - [05/Sep/2026 14:16:02] "GET / HTTP/1.1" 302 -
+2026-09-05 14:16:02,781 - INFO - 192.168.1.132 - - [05/Sep/2026 14:16:02] "GET /login HTTP/1.1" 200 -
+2026-09-05 14:16:03,110 - INFO - 192.168.1.132 - - [05/Sep/2026 14:16:03] "GET /favicon.ico HTTP/1.1" 404 -
+2026-09-05 14:16:18,507 - INFO - 192.168.1.132 - - [05/Sep/2026 14:16:18] "POST /login HTTP/1.1" 302 -
+2026-09-05 14:16:18,542 - INFO - 192.168.1.132 - - [05/Sep/2026 14:16:18] "GET / HTTP/1.1" 200 -
+2026-09-05 14:16:18,623 - INFO - 192.168.1.132 - - [05/Sep/2026 14:16:18] "GET /api/logs HTTP/1.1" 200 -
+2026-09-05 14:16:23,635 - INFO - 192.168.1.132 - - [05/Sep/2026 14:16:23] "GET /api/logs HTTP/1.1" 200 -
+2026-09-05 14:16:24,854 - INFO - 192.168.1.132 - - [05/Sep/2026 14:16:24] "GET /productos HTTP/1.1" 200 -
+2026-09-05 14:17:20,579 - INFO - 192.168.1.132 - - [05/Sep/2026 14:17:20] "POST /api/productos/agregar HTTP/1.1" 200 -
+2026-09-05 14:17:34,198 - INFO - 192.168.1.132 - - [05/Sep/2026 14:17:34] "POST /api/productos/agregar HTTP/1.1" 200 -
+2026-09-05 14:18:03,443 - INFO - 192.168.1.132 - - [05/Sep/2026 14:18:03] "POST /api/productos/agregar HTTP/1.1" 200 -
+2026-09-05 14:18:37,451 - INFO - 192.168.1.132 - - [05/Sep/2026 14:18:37] "POST /api/productos/agregar HTTP/1.1" 200 -
+2026-09-05 14:18:41,760 - INFO - 192.168.1.132 - - [05/Sep/2026 14:18:41] "GET / HTTP/1.1" 200 -
+2026-09-05 14:18:41,836 - INFO - 192.168.1.132 - - [05/Sep/2026 14:18:41] "GET /api/logs HTTP/1.1" 200 -
+2026-09-05 14:18:44,373 - INFO - 192.168.1.132 - - [05/Sep/2026 14:18:44] "GET /preventas HTTP/1.1" 200 -
+2026-09-05 14:19:09,941 - INFO - 192.168.1.132 - - [05/Sep/2026 14:19:09] "POST /api/preventas/agregar HTTP/1.1" 200 -
+2026-09-05 14:19:11,135 - INFO - 192.168.1.132 - - [05/Sep/2026 14:19:11] "POST /api/preventas/agregar HTTP/1.1" 200 -
+2026-09-05 14:19:11,504 - INFO - 192.168.1.132 - - [05/Sep/2026 14:19:11] "GET /preventas HTTP/1.1" 200 -
+2026-09-05 14:19:38,348 - INFO - 192.168.1.132 - - [05/Sep/2026 14:19:38] "GET / HTTP/1.1" 200 -
+2026-09-05 14:19:38,383 - INFO - 192.168.1.132 - - [05/Sep/2026 14:19:38] "GET /api/logs HTTP/1.1" 200 -
+2026-09-05 14:19:43,506 - INFO - 192.168.1.132 - - [05/Sep/2026 14:19:43] "GET /api/logs HTTP/1.1" 200 -
+2026-09-05 14:19:44,746 - INFO - 192.168.1.132 - - [05/Sep/2026 14:19:44] "GET /productos HTTP/1.1" 200 -
+2026-09-05 14:19:54,894 - INFO - 192.168.1.132 - - [05/Sep/2026 14:19:54] "POST /api/productos/agregar HTTP/1.1" 200 -
+2026-09-05 14:47:54,073 - INFO - WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.204:5000
+2026-09-05 14:47:54,074 - INFO - Press CTRL+C to quit
+2026-09-05 14:47:54,092 - INFO -  * Restarting with watchdog (windowsapi)
+2026-09-05 14:47:54,747 - WARNING -  * Debugger is active!
+2026-09-05 14:47:54,750 - INFO -  * Debugger PIN: 276-209-994
+2026-09-05 14:48:01,940 - INFO - 127.0.0.1 - - [05/Sep/2026 14:48:01] "GET /productos HTTP/1.1" 200 -
+2026-09-05 14:48:05,932 - INFO - 127.0.0.1 - - [05/Sep/2026 14:48:05] "GET /productos HTTP/1.1" 200 -
+2026-09-05 14:48:31,586 - INFO - 127.0.0.1 - - [05/Sep/2026 14:48:31] "GET / HTTP/1.1" 200 -
+2026-09-05 14:48:31,884 - INFO - 127.0.0.1 - - [05/Sep/2026 14:48:31] "GET /api/logs HTTP/1.1" 200 -
+2026-09-05 14:48:34,140 - INFO - 127.0.0.1 - - [05/Sep/2026 14:48:34] "GET / HTTP/1.1" 200 -
+2026-09-05 14:48:34,165 - INFO - 127.0.0.1 - - [05/Sep/2026 14:48:34] "GET /api/logs HTTP/1.1" 200 -
+2026-09-05 14:48:39,382 - INFO - 127.0.0.1 - - [05/Sep/2026 14:48:39] "GET /api/logs HTTP/1.1" 200 -
+2026-09-05 14:48:44,693 - INFO - 127.0.0.1 - - [05/Sep/2026 14:48:44] "GET /api/logs HTTP/1.1" 200 -
+2026-09-05 14:48:49,390 - INFO - 127.0.0.1 - - [05/Sep/2026 14:48:49] "GET /api/logs HTTP/1.1" 200 -
+2026-09-05 14:48:54,711 - INFO - 127.0.0.1 - - [05/Sep/2026 14:48:54] "GET /api/logs HTTP/1.1" 200 -
+2026-09-05 14:48:59,383 - INFO - 127.0.0.1 - - [05/Sep/2026 14:48:59] "GET /api/logs HTTP/1.1" 200 -
+2026-09-05 14:49:04,694 - INFO - 127.0.0.1 - - [05/Sep/2026 14:49:04] "GET /api/logs HTTP/1.1" 200 -
+2026-09-05 14:49:09,385 - INFO - 127.0.0.1 - - [05/Sep/2026 14:49:09] "GET /api/logs HTTP/1.1" 200 -
+2026-09-05 14:49:14,695 - INFO - 127.0.0.1 - - [05/Sep/2026 14:49:14] "GET /api/logs HTTP/1.1" 200 -
+2026-09-05 14:49:19,388 - INFO - 127.0.0.1 - - [05/Sep/2026 14:49:19] "GET /api/logs HTTP/1.1" 200 -
+2026-09-05 14:49:24,479 - INFO - 127.0.0.1 - - [05/Sep/2026 14:49:24] "GET /api/logs HTTP/1.1" 200 -
+2026-09-05 14:49:28,575 - INFO - 127.0.0.1 - - [05/Sep/2026 14:49:28] "GET /productos HTTP/1.1" 200 -
+2026-09-05 14:49:54,450 - INFO - 127.0.0.1 - - [05/Sep/2026 14:49:54] "POST /api/productos/agregar HTTP/1.1" 200 -
+2026-09-05 14:49:54,781 - INFO - 127.0.0.1 - - [05/Sep/2026 14:49:54] "GET /productos HTTP/1.1" 200 -
+2026-09-05 14:50:33,544 - INFO - 127.0.0.1 - - [05/Sep/2026 14:50:33] "POST /api/productos/agregar HTTP/1.1" 200 -
+2026-09-05 14:50:33,561 - INFO - 127.0.0.1 - - [05/Sep/2026 14:50:33] "GET /productos HTTP/1.1" 200 -
+2026-09-05 14:50:38,079 - INFO - 127.0.0.1 - - [05/Sep/2026 14:50:38] "GET / HTTP/1.1" 200 -
+2026-09-05 14:50:38,399 - INFO - 127.0.0.1 - - [05/Sep/2026 14:50:38] "GET /api/logs HTTP/1.1" 200 -
+2026-09-05 14:50:43,433 - INFO - 127.0.0.1 - - [05/Sep/2026 14:50:43] "GET /api/logs HTTP/1.1" 200 -
+2026-09-05 14:50:44,207 - INFO - 127.0.0.1 - - [05/Sep/2026 14:50:44] "GET /configuracion HTTP/1.1" 200 -

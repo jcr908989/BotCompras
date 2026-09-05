@@ -1,0 +1,27 @@
+{
+  "datos_pago": {
+    "nombre": "",
+    "apellido": "",
+    "direccion": "",
+    "ciudad": "",
+    "codigo_postal": "",
+    "pais": "Espa\u00f1a",
+    "telefono": "",
+    "email": ""
+  },
+  "tarjeta": {
+    "numero": "",
+    "mes_expiracion": "",
+    "anio_expiracion": "",
+    "cvv": "",
+    "titular": ""
+  },
+  "paypal": {
+    "email": "",
+    "password": ""
+  },
+  "telegram": {
+    "bot_token": "8990190325:AAH-qD2BFhbw3nA9NweOndwH6YzfviDMWcg",
+    "chat_id": "8514421716"
+  }
+}
