@@ -8,30 +8,34 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <style>
-        body { background-color: #f8f9fa; }
-        .navbar { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
+        body { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); min-height: 100vh; }
         .card { border: none; border-radius: 15px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
         .card-header { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; border-radius: 15px 15px 0 0 !important; }
+        .nav-glass { background: rgba(255,255,255,0.1); backdrop-filter: blur(10px); }
     </style>
 </head>
 <body>
-    <nav class="navbar navbar-dark mb-4">
+    <nav class="navbar navbar-dark nav-glass mb-4">
         <div class="container">
-            <a class="navbar-brand" href="/"><i class="bi bi-robot"></i> Bot de Compras</a>
+            <a class="navbar-brand" href="/"><i class="bi bi-robot"></i> Bot 24/7</a>
             <div>
                 <a href="/" class="btn btn-outline-light btn-sm me-2"><i class="bi bi-house"></i> Inicio</a>
-                <button class="btn btn-success btn-sm" onclick="verificarStock()"><i class="bi bi-search"></i> Verificar Stock</button>
+                <button class="btn btn-success btn-sm" onclick="verificarStock()">
+                    <i class="bi bi-search"></i> Verificar Stock
+                </button>
             </div>
         </div>
     </nav>
 
     <div class="container">
         <div class="alert alert-info">
-            <strong>Tiendas disponibles:</strong> topps.com, game.com, inside-the-box.de
+            <i class="bi bi-info-circle"></i>
+            <strong>Tiendas soportadas:</strong> topps.com, game.com, inside-the-box.de, amazon.es, ebay.es, 
+            cardmarket.com, fnac.es, elcorteingles.es, aliexpress.com, wallapop.com
         </div>
 
         <div class="card mb-4">
-            <div class="card-header"><h5 class="mb-0"><i class="bi bi-plus-circle"></i> Añadir Producto</h5></div>
+            <div class="card-header"><h5 class="mb-0"><i class="bi bi-plus-circle"></i> Nuevo Producto</h5></div>
             <div class="card-body">
                 <form id="formProducto">
                     <div class="row">
@@ -44,13 +48,13 @@
                             <input type="url" class="form-control" id="urlProducto" placeholder="https://www.topps.com/producto..." required>
                         </div>
                     </div>
-                    <button type="submit" class="btn btn-primary mt-2"><i class="bi bi-plus-lg"></i> Añadir</button>
+                    <button type="submit" class="btn btn-primary mt-2"><i class="bi bi-plus-lg"></i> Añadir Producto</button>
                 </form>
             </div>
         </div>
 
         <div class="card">
-            <div class="card-header"><h5 class="mb-0"><i class="bi bi-list"></i> Productos</h5></div>
+            <div class="card-header"><h5 class="mb-0"><i class="bi bi-list"></i> Mis Productos</h5></div>
             <div class="card-body">
                 <div id="listaProductos">
                     {% if productos %}
@@ -58,11 +62,11 @@
                         <div class="d-flex justify-content-between align-items-center border-bottom py-2">
                             <div>
                                 <strong>{{ p.nombre }}</strong>
-                                <span class="badge bg-{{ 'info' if p.tienda == 'topps' else 'warning' if p.tienda == 'game' else 'secondary' }}">
+                                <span class="badge bg-{{ 'info' if p.tienda == 'topps' else 'warning' if p.tienda == 'game' else 'secondary' if p.tienda == 'inside_box' else 'success' if p.tienda == 'amazon' else 'danger' if p.tienda == 'ebay' else 'primary' if p.tienda == 'cardmarket' else 'dark' if p.tienda == 'fnac' else 'light' if p.tienda == 'elcorteingles' else 'info' if p.tienda == 'aliexpress' else 'secondary' }}">
                                     {{ p.tienda }}
                                 </span>
                                 {% if p.disponible %}
-                                    <span class="badge bg-success">✅ Disponible</span>
+                                    <span class="badge bg-success">✅ Stock</span>
                                 {% else %}
                                     <span class="badge bg-danger">❌ Agotado</span>
                                 {% endif %}
@@ -103,26 +107,24 @@
 
         function verificarStock() {
             const btn = event.target;
-            btn.innerHTML = '<span class="spinner-border spinner-border-sm"></span> Verificando...';
             btn.disabled = true;
+            btn.innerHTML = '<span class="spinner-border spinner-border-sm"></span>';
             
             $.ajax({
                 url: '/api/productos/verificar',
                 method: 'POST',
                 contentType: 'application/json',
                 success: function(r) {
-                    if(r.success) {
-                        let html = '<h6>Resultados:</h6>';
-                        r.resultados.forEach(p => {
-                            html += `<p>${p.nombre}: ${p.disponible ? '✅ Disponible' : '❌ Agotado'}</p>`;
-                        });
-                        alert(html.replace(/<[^>]*>/g, ''));
-                        location.reload();
-                    }
+                    let msg = 'Resultados:\n';
+                    r.resultados.forEach(p => {
+                        msg += `${p.nombre}: ${p.disponible ? '✅ Stock' : '❌ Agotado'}\n`;
+                    });
+                    alert(msg);
+                    location.reload();
                 },
                 complete: function() {
-                    btn.innerHTML = '<i class="bi bi-search"></i> Verificar Stock';
                     btn.disabled = false;
+                    btn.innerHTML = '<i class="bi bi-search"></i> Verificar Stock';
                 }
             });
         }
